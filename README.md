@@ -1,140 +1,57 @@
-🏫 CMRIT Smart Campus Optimizer
-📌 Problem Statement
-
-At CMRIT, students face crowd congestion, long waiting times, and inefficient access to campus services due to the lack of real-time service visibility and demand awareness.
-
-💡 Proposed Solution
-
-A smart campus platform that provides real-time service visibility and demand insights to help students choose less crowded time slots and reduce waiting time.
-
-🚀 Project Overview
-
-CMRIT Smart Campus Optimizer is a web-based application designed to improve the efficiency of campus services such as:
-
-Smart Canteen
-
-Library Hub
-
-Administration Office
-
-Examination Cell
-
-The system predicts crowd levels based on time and usage patterns and presents them in a simple, user-friendly dashboard.
-
-✨ Key Features
-
-Crowd level prediction based on day and time
-
-Waiting time estimation
-
-Smart canteen token system
-
-Library slot booking awareness
-
-Administration office appointment visibility
-
+Smart Campus Optimizer
+Live Demo:
+https://smartcampusoptimizer.netlify.app/
+GitHub Repository:
+https://github.com/Karthisha25/smartcampusoptimizers
+Project Overview
+Smart Campus Optimizer is a web-based application designed to reduce queue congestion, improve time management, and optimize campus services. The system provides AI-assisted crowd prediction and waiting time estimation to help students make better decisions while accessing campus facilities.
+The platform focuses on building an AI-ready, data-driven, and scalable campus service optimization system.
+Problem Statement
+Students face long waiting times and overcrowding at campus services such as canteen, library, administration office, and examination cell, leading to time wastage and reduced efficiency.
+Proposed Solution
+Smart Campus Optimizer predicts crowd levels and waiting times based on selected service, day, and time, helping students choose less crowded time slots and reduce physical queues.
+Features
+AI-based crowd level prediction
+Estimated waiting time display
+Smart canteen pre-ordering interface
+Library seat availability and slot booking
+Administration office appointment booking
 Examination cell request tracking
-
-Real-time service status dashboard
-
-Clean and responsive UI
-
-Data-driven decision support
-
-Scalable and AI-ready architecture
-
-🗺️ Google Maps Integration - Campus location mapping and directions
-
-📅 Google Calendar Integration - Add appointments directly to your calendar
-
-🛠 Tech Stack
-
-Frontend: React + TypeScript + Vite
-
+Firebase Firestore integration for storing prediction history
+Responsive and user-friendly UI
+Live deployment on Netlify
+Google Technologies Used
+Google Gemini API – AI-based crowd and waiting time prediction
+Google AI Studio – API key generation and model access validation
+Firebase Firestore – Storage of prediction history and usage data
+Tech Stack
+Frontend: React, TypeScript, Vite
 Styling: CSS
-
-Prediction Logic: Local data-driven inference
-
-Google Services: Maps API, Calendar API
-
-AI Integration: Google Gemini AI (optional)
-
-Deployment: Netlify
-
+AI: Google Gemini API
+Database: Firebase Firestore
+Hosting: Netlify
 Version Control: GitHub
-
-▶️ How to Run Locally
-git clone https://github.com/Karthisha25/smartcampusoptimizers.git
-cd smartcampusoptimizers
+System Workflow
+User Input → Prediction Logic → Gemini AI → Firestore Storage → UI Display
+How to Run Locally
 npm install
 npm run dev
-
-
-🔑 Google Services Setup (Optional)
-
-To enable Google Maps and Calendar features:
-
-1. **Google Maps API Key:**
-   - Get your API key from [Google Cloud Console](https://console.cloud.google.com/)
-   - Enable "Maps JavaScript API" and "Maps Embed API"
-   - Add to `index.html` (replace `YOUR_API_KEY`) or set `VITE_GOOGLE_MAPS_API_KEY` in `.env`
-
-2. **Google Gemini AI (Optional):**
-   - Get your API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
-   - Set `VITE_GEMINI_API_KEY` in `.env` file
-
-3. **Create `.env` file:**
-   ```
-   VITE_GOOGLE_MAPS_API_KEY=your_maps_api_key_here
-   VITE_GEMINI_API_KEY=your_gemini_api_key_here
-   ```
-
-Note: The application works without API keys using rule-based predictions and static maps.
-
-🏗 Build for Production
-npm run build
-
-
-This generates a dist folder ready for deployment.
-
-🌐 Live Demo
-
-🔗 Live Application:
+Create a .env file and add:
+VITE_GEMINI_API_KEY=your_api_key_here
+Deployment
+The project is deployed on Netlify using Vite build output.
+Live URL:
 https://smartcampusoptimizer.netlify.app/
-🔗 GitHub Repository:
-https://github.com/Karthisha25/smartcampusoptimizer
-
-🎯 Impact
-
-Reduced waiting time for students
-
-Better planning of campus visits
-
-Improved service utilization
-
-Enhanced campus experience at CMRIT
-
-👥 Team Contributions
-
-Frontend development and UI design
-
-Prediction logic and data handling
-
-Deployment and GitHub management
-
-Documentation and presentation
-
-📌 Future Scope
-
-Integration with real AI models
-
-Firebase database integration
-
-Mobile application version
-
-Personalized user dashboards
-
-👤 Author
-
-Karthisha
-Smart Campus Optimizer Project
+Future Scope
+Improve AI prediction accuracy using long-term historical and seasonal data
+Expand to more campus services using the same framework
+Add smart notifications and alerts
+Integrate secure online payment options
+Support multiple campuses and hostels
+Team Contributions
+UI and frontend development
+AI prediction logic integration
+Firebase Firestore integration
+Deployment and documentation
+Conclusion
+Smart Campus Optimizer provides an AI-ready and data-driven approach to campus service optimization, improving efficiency and reducing congestion across campus facilities.
