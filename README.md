@@ -102,7 +102,7 @@ This generates a dist folder ready for deployment.
 🔗 Live Application:
 https://smartcampusoptimizer.netlify.app/
 🔗 GitHub Repository:
-https://github.com/Karthisha25/cmritsmartcampusoptimizer
+https://github.com/Karthisha25/smartcampusoptimizer
 
 🎯 Impact
 
@@ -137,4 +137,4 @@ Personalized user dashboards
 👤 Author
 
 Karthisha
- Smart Campus Optimizer Project
+Smart Campus Optimizer Project
