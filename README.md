@@ -64,8 +64,8 @@ Deployment: Netlify
 Version Control: GitHub
 
 ▶️ How to Run Locally
-git clone https://github.com/Karthisha25/cmritsmartcampusoptimizer.git
-cd cmritsmartcampusoptimizer
+git clone https://github.com/Karthisha25/smartcampusoptimizers.git
+cd smartcampusoptimizers
 npm install
 npm run dev
 
@@ -104,8 +104,7 @@ This generates a dist folder ready for deployment.
 🌐 Live Demo
 
 🔗 Live Application:
-https://samrtcampusoptimizer.netlify.app
-
+https://smartcampusoptimizer.netlify.app/
 🔗 GitHub Repository:
 https://github.com/Karthisha25/cmritsmartcampusoptimizer
 
@@ -142,4 +141,4 @@ Personalized user dashboards
 👤 Author
 
 Karthisha
-CMRIT Smart Campus Optimizer Project
+ Smart Campus Optimizer Project
