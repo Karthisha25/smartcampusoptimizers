@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { getCampusPrediction } from '../geminiService';
 import { PredictionResult } from '../types';
 import PredictionIndicator from './PredictionIndicator';
+import { savePredictionHistory, saveServiceUsage } from '../firestoreService';
 
 const ExamModule: React.FC = () => {
   const [selectedDay, setSelectedDay] = useState('Monday');
@@ -21,6 +22,12 @@ const ExamModule: React.FC = () => {
     const res = await getCampusPrediction('Exam Cell', selectedDay, selectedTime, `Service: ${service}`);
     setPrediction(res);
     setLoadingPrediction(false);
+    
+    // Save prediction history and service usage to Firestore
+    if (res) {
+      await savePredictionHistory('Exam Cell', selectedDay, selectedTime, res, `Service: ${service}`);
+      await saveServiceUsage('Exam Cell', selectedDay, selectedTime, res.crowdLevel, res.estimatedWaitMinutes);
+    }
   };
 
   const services = ['Marks Card Collection', 'Provisional Certificate', 'Revaluation Request', 'Exam Hall Ticket', 'Degree Verification'];

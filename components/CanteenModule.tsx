@@ -4,6 +4,7 @@ import { getCampusPrediction, getDemandForecast } from '../geminiService';
 // Fix: Removed GroupOrderMember which is not defined in types.ts and not used in this component.
 import { PredictionResult, MenuItem, LeaderboardEntry } from '../types';
 import PredictionIndicator from './PredictionIndicator';
+import { savePredictionHistory, saveServiceUsage } from '../firestoreService';
 
 const MENU_ITEMS: MenuItem[] = [
   { id: '1', name: 'South Indian Thali', price: 60, category: 'Main', demandFactor: 8, imageUrl: 'https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=300&q=80' },
@@ -40,6 +41,12 @@ const CanteenModule: React.FC = () => {
     const res = await getCampusPrediction('Canteen', selectedDay, selectedTime);
     setPrediction(res);
     setLoadingPrediction(false);
+    
+    // Save prediction history and service usage to Firestore
+    if (res) {
+      await savePredictionHistory('Canteen', selectedDay, selectedTime, res);
+      await saveServiceUsage('Canteen', selectedDay, selectedTime, res.crowdLevel, res.estimatedWaitMinutes);
+    }
   };
 
   const loadForecast = async () => {

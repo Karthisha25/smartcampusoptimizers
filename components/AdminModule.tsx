@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { getCampusPrediction } from '../geminiService';
 import { PredictionResult } from '../types';
 import PredictionIndicator from './PredictionIndicator';
+import { savePredictionHistory, saveServiceUsage } from '../firestoreService';
 
 const AdminModule: React.FC = () => {
   const [serviceType, setServiceType] = useState<string | null>(null);
@@ -23,6 +24,12 @@ const AdminModule: React.FC = () => {
     const res = await getCampusPrediction('Admin Office', selectedDay, selectedTime, `Service: ${serviceType}`);
     setPrediction(res);
     setLoadingPrediction(false);
+    
+    // Save prediction history and service usage to Firestore
+    if (res && serviceType) {
+      await savePredictionHistory('Admin Office', selectedDay, selectedTime, res, `Service: ${serviceType}`);
+      await saveServiceUsage('Admin Office', selectedDay, selectedTime, res.crowdLevel, res.estimatedWaitMinutes);
+    }
   };
 
   const services = ['Scholarship Help', 'ID Card Issues', 'Transport Desk', 'Fees & Accounts', 'Bus Pass Renewal'];

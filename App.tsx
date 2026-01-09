@@ -115,7 +115,7 @@ const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
         ))}
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
         <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-8 text-white flex flex-col justify-between min-h-[300px] overflow-hidden relative">
           <div className="relative z-10">
              <span className="text-xs font-bold uppercase tracking-widest text-teal-400 mb-2 block">Campus Update</span>
@@ -152,6 +152,7 @@ const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
            </div>
         </div>
       </div>
+
     </div>
   );
 };

@@ -43,6 +43,10 @@ Data-driven decision support
 
 Scalable and AI-ready architecture
 
+🗺️ Google Maps Integration - Campus location mapping and directions
+
+📅 Google Calendar Integration - Add appointments directly to your calendar
+
 🛠 Tech Stack
 
 Frontend: React + TypeScript + Vite
@@ -50,6 +54,10 @@ Frontend: React + TypeScript + Vite
 Styling: CSS
 
 Prediction Logic: Local data-driven inference
+
+Google Services: Maps API, Calendar API
+
+AI Integration: Google Gemini AI (optional)
 
 Deployment: Netlify
 
@@ -65,6 +73,27 @@ npm run dev
 The application will run on:
 
 http://localhost:5173
+
+🔑 Google Services Setup (Optional)
+
+To enable Google Maps and Calendar features:
+
+1. **Google Maps API Key:**
+   - Get your API key from [Google Cloud Console](https://console.cloud.google.com/)
+   - Enable "Maps JavaScript API" and "Maps Embed API"
+   - Add to `index.html` (replace `YOUR_API_KEY`) or set `VITE_GOOGLE_MAPS_API_KEY` in `.env`
+
+2. **Google Gemini AI (Optional):**
+   - Get your API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
+   - Set `VITE_GEMINI_API_KEY` in `.env` file
+
+3. **Create `.env` file:**
+   ```
+   VITE_GOOGLE_MAPS_API_KEY=your_maps_api_key_here
+   VITE_GEMINI_API_KEY=your_gemini_api_key_here
+   ```
+
+Note: The application works without API keys using rule-based predictions and static maps.
 
 🏗 Build for Production
 npm run build
