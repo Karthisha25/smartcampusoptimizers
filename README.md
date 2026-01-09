@@ -70,10 +70,6 @@ npm install
 npm run dev
 
 
-The application will run on:
-
-http://localhost:5173
-
 🔑 Google Services Setup (Optional)
 
 To enable Google Maps and Calendar features:
